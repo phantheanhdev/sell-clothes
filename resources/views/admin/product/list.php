@@ -15,9 +15,7 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th>Image</th>
-                    <th>Quantity</th>
                     <th>Category</th>
-                    <th>Size</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -27,41 +25,27 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th>Image</th>
-                    <th>Quantity</th>
                     <th>Category</th>
-                    <th>Size</th>
                     <th>Action</th>
                 </tr>
             </tfoot>
             <tbody>
 
-                <?php foreach ($products as $value_pro) {  ?>
+                <?php foreach ($all_pro as $value_pro) {  ?>
                     <tr>
                         <td><?= $value_pro->pro_name ?></td>
                         <td><?= $value_pro->pro_price ?></td>
                         <td><?= $value_pro->pro_desc ?></td>
                         <td>
-                            <img src="images/<?= $value_pro->pro_img ?>" alt="" width="100px" height="100px">
+                            <img src="images/products/<?= $value_pro->pro_img ?>" alt="" width="100px" height="100px">
                         </td>
-                        <td><?= $value_pro->pro_quantity ?></td>
 
-                        <?php foreach ($categories as $value_categories) { ?>
-
-                            <?php
-                            if ($value_pro->categories_id == $value_categories->categories_id) { ?>
-                                <td>
-                                    <?= $value_categories->categories_name; ?>
-                                </td>
-                        <?php
-                            }
-                        } ?>
-
-                        <?php foreach ($sizes as $value_size) { ?>
+                        <?php foreach ($all_categories as $value_categories) { ?>
 
                             <?php
-                            if ($value_pro->sizes_id == $value_size->sizes_id) { ?>
+                            if ($value_pro->ct_id == $value_categories->ct_id) { ?>
                                 <td>
-                                    <?= $value_size->sizes_name; ?>
+                                    <?= $value_categories->ct_name; ?>
                                 </td>
                         <?php
                             }

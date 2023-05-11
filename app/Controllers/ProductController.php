@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\CategoryModel;
+use App\Models\ProductModel;
+use App\Request;
+
 class ProductController extends Controller
 {
     //======================= user ===========================
@@ -60,12 +64,26 @@ class ProductController extends Controller
     // =============== admin =======================
     public function ad_list_pro()
     {
-        $this->view_admin('product/list');
+        $all_pro = ProductModel::all();
+        $all_categories = CategoryModel::all();
+        $this->view_admin('product/list', ['all_pro' => $all_pro, 'all_categories' => $all_categories]);
     }
 
     public function ad_add_pro()
     {
-        $this->view_admin('product/add');
+        $all_categories = CategoryModel::all();
+        $this->view_admin('product/add', ['all_categories' => $all_categories]);
     }
+    public function ad_save_add_pro(Request $request)
+    {
+        $product = $request->getBody();
+        $product['pro_img'] = $_FILES['pro_img']['name'];
 
+        move_uploaded_file($_FILES['pro_img']['tmp_name'], "images/products/" . $_FILES['pro_img']['name']);
+
+        $p = new ProductModel();
+        $p->insert($product);
+        header("location: /ad_list_pro");
+        die;
+    }
 }

@@ -48,7 +48,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">ADMIN</div>
-                        <a class="nav-link" href="/ad-list-product">
+                        <a class="nav-link" href="/ad_list_pro">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             PRODUCTS
                         </a>
