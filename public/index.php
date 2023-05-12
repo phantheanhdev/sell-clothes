@@ -40,6 +40,7 @@ Router::get('/cart', [CartController::class, 'cart']);
 Router::get('/ad_list_pro', [ProductController::class, 'ad_list_pro']);
 Router::get('/ad_add_pro', [ProductController::class, 'ad_add_pro']);
 Router::post('/ad_save_add_pro', [ProductController::class, 'ad_save_add_pro']);
+Router::get('/ad_delete_pro', [ProductController::class, 'ad_delete_pro']);
 
 
 $router->resolve();

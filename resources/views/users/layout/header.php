@@ -146,6 +146,7 @@
               <a href="/log_in" class="top-my-account">
                 <i class="fa fa-user"></i>
               </a>
+              
               <!-- so sánh sản phẩm -->
               <!-- <a href="compare.html" class="top-compare">
                 <i class="fa fa-signal"></i>

@@ -5,14 +5,14 @@
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
-        list products
+        List products
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th>Price (VNĐ)</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Category</th>
@@ -22,7 +22,7 @@
             <tfoot>
                 <tr>
                     <th>Name</th>
-                    <th>Price</th>
+                    <th>Price (VNĐ)</th>
                     <th>Description</th>
                     <th>Image</th>
                     <th>Category</th>
@@ -37,7 +37,7 @@
                         <td><?= $value_pro->pro_price ?></td>
                         <td><?= $value_pro->pro_desc ?></td>
                         <td>
-                            <img src="images/products/<?= $value_pro->pro_img ?>" alt="" width="100px" height="100px">
+                            <img src="images/products/<?= $value_pro->pro_img ?>" alt="" width="150px" height="150px">
                         </td>
 
                         <?php foreach ($all_categories as $value_categories) { ?>
@@ -53,11 +53,11 @@
 
                         <td>
                             <a href="/ad-update-product?id=<?= $value_pro->pro_id ?>" class="px-2">
-                                <button>edit</button>
+                                <button class="btn btn-success">Edit</button>
                             </a>
-                            <a href="/ad-delete-product?id=<?= $value_pro->pro_id ?>" onclick="return confirm('Do you want to delete it ?')">
+                            <a href="/ad_delete_pro?id=<?= $value_pro->pro_id ?>" onclick="return confirm('Do you want to delete it ?')">
 
-                                <button>delete</button>
+                                <button class="btn btn-danger">Delete</button>
                             </a>
                         </td>
                     </tr>

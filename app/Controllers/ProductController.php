@@ -86,4 +86,12 @@ class ProductController extends Controller
         header("location: /ad_list_pro");
         die;
     }
+    public function ad_delete_pro(Request $request)
+    {
+        $id = $request->getBody()['id'];
+        $p = new ProductModel();
+        $p->delete('pro_id', $id);
+        header("location: /ad_list_pro");
+        exit;
+    }
 }
