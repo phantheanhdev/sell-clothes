@@ -52,12 +52,12 @@
                         } ?>
 
                         <td>
-                            <a href="/ad-update-product?id=<?= $value_pro->pro_id ?>" class="px-2">
-                                <button class="btn btn-success">Edit</button>
+                            <a href="/ad_update_pro?id=<?= $value_pro->pro_id ?>">
+                                <button class="btn btn-success mb-1" style="width:100px">Update</button>
                             </a>
                             <a href="/ad_delete_pro?id=<?= $value_pro->pro_id ?>" onclick="return confirm('Do you want to delete it ?')">
 
-                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-danger" style="width:100px">Delete</button>
                             </a>
                         </td>
                     </tr>

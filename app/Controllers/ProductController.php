@@ -94,4 +94,9 @@ class ProductController extends Controller
         header("location: /ad_list_pro");
         exit;
     }
+    public function ad_update_pro()
+    {
+        $all_categories = CategoryModel::all();
+        $this->view_admin('product/update', ['all_categories' => $all_categories]);
+    }
 }
