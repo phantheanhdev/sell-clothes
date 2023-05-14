@@ -94,9 +94,30 @@ class ProductController extends Controller
         header("location: /ad_list_pro");
         exit;
     }
-    public function ad_update_pro()
+    public function ad_update_pro(Request $request)
     {
+        $id = $request->getBody()['id'];
+        $product = ProductModel::findOne('pro_id', $id);
         $all_categories = CategoryModel::all();
-        $this->view_admin('product/update', ['all_categories' => $all_categories]);
+
+        $this->view_admin('product/update', [
+            'all_categories' => $all_categories,
+            'product' => $product
+        ]);
+    }
+    public function ad_save_update_pro(Request $request)
+    {
+        $id = $request->getBody()['id'];
+        $data = $request->getBody();
+
+        if ($_FILES['pro_img']['size'] > 0) {
+            $data['pro_img'] = $_FILES['pro_img']['name'];
+            move_uploaded_file($_FILES['pro_img']['tmp_name'], 'images/products/' . $data['pro_img']);
+        };
+
+        $p = new ProductModel();
+        $p->update('pro_id', $data['id'], $data);
+        header("location: /ad_list_pro");
+        exit;
     }
 }

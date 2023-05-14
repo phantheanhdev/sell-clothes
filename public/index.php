@@ -42,6 +42,7 @@ Router::get('/ad_add_pro', [ProductController::class, 'ad_add_pro']);
 Router::post('/ad_save_add_pro', [ProductController::class, 'ad_save_add_pro']);
 Router::get('/ad_delete_pro', [ProductController::class, 'ad_delete_pro']);
 Router::get('/ad_update_pro', [ProductController::class, 'ad_update_pro']);
+Router::post('/ad_save_update_pro', [ProductController::class, 'ad_save_update_pro']);
 
 
 $router->resolve();

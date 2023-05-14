@@ -4,41 +4,52 @@
     <button type="button" class="btn btn-outline-secondary mb-4 mt-3">List products</button>
 </a>
 <div class="card mb-4">
-    <form action="/ad_save_add_pro" method="post" class="mx-5 mt-3" enctype="multipart/form-data" onsubmit="return validate()">
+    <form action="/ad_save_update_pro" method="post" class="mx-5 mt-3" enctype="multipart/form-data" onsubmit="return validate()">
 
         <!-- text -->
         <div class="mb-3">
             <label class="form-label">Name</label>
-            <input type="text" class="form-control" name="pro_name" id="pro_name">
+            <input type="text" class="form-control" name="pro_name" id="pro_name" value="<?= $product->pro_name ?>">
             <span class="form-text" id="err_pro_name" style="color: red;"> </span>
         </div>
         <div class="mb-3">
             <label class="form-label">Price</label>
-            <input type="number" class="form-control" name="pro_price" id="pro_price">
+            <input type="number" class="form-control" name="pro_price" id="pro_price" value="<?= $product->pro_price ?>">
             <span class="form-text" style="color: red;" id="err_pro_price"> </span>
         </div>
         <div class="mb-3">
             <label for="floatingTextarea">Description</label>
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="pro_desc" style="height: 200px;" name="pro_desc"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="pro_desc" style="height: 200px;" name="pro_desc" value=""><?= $product->pro_desc ?></textarea>
                 <span class="form-text" style="color: red;" id="err_pro_desc"> </span>
             </div>
         </div>
 
         <select class="form-select mb-3" aria-label="Default select example" name="ct_id" id="pro_category">
-            <?php foreach ($all_categories as $value_categories) : ?>
-                <option value="<?= $value_categories->ct_id ?>">
+            <?php foreach ($all_categories as $value_categories) { ?>
+                <option value="<?= $value_categories->ct_id ?>" <?php
+                                                                if ($product->ct_id == $value_categories->ct_id) {
+                                                                    echo 'selected';
+                                                                };
+                                                                ?>>
                     <?= $value_categories->ct_name ?>
                 </option>
-            <?php endforeach ?>
+            <?php } ?>
         </select>
         <span class="form-text" style="color: red;" id="err_pro_category"> </span>
 
         <!-- img -->
-        <div class="mb-3">
-            <label class="form-label">Image</label>
-            <input type="file" class="form-control" name="pro_img" multiple id="pro_img">
-            <span class="form-text" style="color: red;" id="err_pro_img"> </span>
+        <div class="mb-3 row">
+            <div class="col-sm-6">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control" name="pro_img" multiple id="pro_img" file.name="<?= $product->img ?>">
+                <span class="form-text" style="color: red;" id="err_pro_img"> </span>
+            </div>
+            <div class="col-sm-6">
+                <label for="">Ảnh hiện tại</label>
+                <br>
+                <img src="images/products/<?= $product->pro_img ?>" alt="" width="200px" height="200px">
+            </div>
         </div>
 
         <input type="submit" class="btn btn-primary mb-4" id="submit_add_pro">
