@@ -6,6 +6,7 @@
 <div class="card mb-4">
     <form action="/ad_save_update_pro" method="post" class="mx-5 mt-3" enctype="multipart/form-data" onsubmit="return validate()">
 
+        <input type="hidden" value="<?= $product->pro_id ?>" name="pro_id">
         <!-- text -->
         <div class="mb-3">
             <label class="form-label">Name</label>
@@ -41,8 +42,9 @@
         <!-- img -->
         <div class="mb-3 row">
             <div class="col-sm-6">
-                <label class="form-label">Image</label>
-                <input type="file" class="form-control" name="pro_img" multiple id="pro_img" file.name="<?= $product->img ?>">
+                <label class="form-label">Image </label> 
+                <span style="color: red;">(nếu không chọn ảnh, sẽ dùng ảnh hiện tại)</span>
+                <input type="file" class="form-control" name="pro_img" multiple id="pro_img">
                 <span class="form-text" style="color: red;" id="err_pro_img"> </span>
             </div>
             <div class="col-sm-6">
@@ -119,16 +121,16 @@
             flag.desc = false;
         }
         // 
-        if (pro_img == '' || pro_img == null) {
-            err_pro_img.innerHTML = "Hãy chọn ảnh"
-            flag.img = true;
-        } else {
-            err_pro_img.innerHTML = "";
-            flag.img = false;
-        }
+        // if (pro_img == '' || pro_img == null) {
+        //     err_pro_img.innerHTML = "Hãy chọn ảnh"
+        //     flag.img = true;
+        // } else {
+        //     err_pro_img.innerHTML = "";
+        //     flag.img = false;
+        // }
 
         // 
-        if (flag.name == false && flag.price == false && flag.desc == false && flag.img == false) {
+        if (flag.name == false && flag.price == false && flag.desc == false /* && flag.img == false */ ) {
             return true;
         } else {
             return false;

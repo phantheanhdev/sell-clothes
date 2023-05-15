@@ -107,8 +107,16 @@ class ProductController extends Controller
     }
     public function ad_save_update_pro(Request $request)
     {
-        $id = $request->getBody()['id'];
+        // $id = $request->getBody()['id'];
         $data = $request->getBody();
+
+        $id_pro = $data['pro_id'];
+        $product = ProductModel::findOne('pro_id', $id_pro);
+        $input_file_img = $_FILES['pro_img']['size'];
+
+        if ($input_file_img <= 0) {
+            $data['pro_img'] = $product->pro_img;
+        }
 
         if ($_FILES['pro_img']['size'] > 0) {
             $data['pro_img'] = $_FILES['pro_img']['name'];
@@ -116,7 +124,7 @@ class ProductController extends Controller
         };
 
         $p = new ProductModel();
-        $p->update('pro_id', $data['id'], $data);
+        $p->update('pro_id', $data['pro_id'], $data);
         header("location: /ad_list_pro");
         exit;
     }
