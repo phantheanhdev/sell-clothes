@@ -21,16 +21,17 @@
                     <h4>Đăng nhập</h4>
                     <p class="before-login-text">Chào mừng trở lại! đăng nhập vào tài khoản của bạn</p>
 
-                    <label for="emmail_login"> Tài khoản <span class="required">*</span></label>
-                    <input id="emmail_login" type="text" class="form-control">
+                    <form action="/submit_log_in" method="post" enctype="multipart/form-data">
+                        <label for="emmail_login"> Tài khoản <span class="required">*</span></label>
+                        <input id="emmail_login" type="text" class="form-control" name="acc_name">
 
-                    <label for="password_login">Mật khẩu <span class="required">*</span></label>
-                    <input id="password_login" type="password" class="form-control">
+                        <label for="password_login">Mật khẩu <span class="required">*</span></label>
+                        <input id="password_login" type="password" class="form-control" name="acc_pass">
 
-                    <p class="forgot-pass"><a href="#">Quên mật khẩu?</a></p>
+                        <p class="forgot-pass"><a href="#">Quên mật khẩu?</a></p>
 
-                    <button class="button"><i class="fa fa-lock"></i>&nbsp; <span>Đăng nhập</span></button>
-
+                        <button class="button"><i class="fa fa-lock"></i>&nbsp; <span>Đăng nhập</span></button>
+                    </form>
                     <!-- <label class="inline" for="rememberme">
                         <input type="checkbox" value="forever" id="rememberme" name="rememberme">
                         Remember me </label> -->

@@ -68,17 +68,6 @@ class BaseModel
         $stmt->execute($data);
     }
 
-    // lay 1 dong
-    public function one_line()
-    {
-        $model = new static;
-        $model->sqlBuilder = "SELECT * FROM $model->tableName LIMIT 1";
-        $stmt = $model->conn->prepare($model->sqlBuilder);
-        $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_CLASS);
-        return $result;
-    }
-
     // lấy dữ liệu theo điều kiện
     public static function get_data_by_condition(string $data)
     {

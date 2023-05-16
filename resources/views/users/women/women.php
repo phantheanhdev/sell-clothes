@@ -1,1 +1,0 @@
-<h1>women all page</h1>

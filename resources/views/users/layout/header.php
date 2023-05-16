@@ -168,13 +168,8 @@
                   </div>
                   <ul class="hidden-xs">
                     <li class="active custom-menu"><a href="/home">Trang chủ</a>
-                      <!-- <ul class="dropdown">
-                        <li><a href="https://htmlfancy.justthemevalley.com/version1/index.html">Home Version 1</a></li>
-                        <li><a href="index.html">Home Version 2</a></li>
-                        <li><a href="https://htmlfancy.justthemevalley.com/version3/index.html">Home Version 3</a></li>
-                      </ul> -->
                     </li>
-                    <li class="megamenu"><a href="/men">Đồ nam</a>
+                    <li class="megamenu"><a href="#">Đồ nam</a>
                       <div class="mega-menu">
                         <div class="menu-block menu-block-center">
                           <div class="menu-block-1">
@@ -203,7 +198,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="megamenu"><a href="/women">Đồ nữ</a>
+                    <li class="megamenu"><a href="#">Đồ nữ</a>
                       <div class="mega-menu">
                         <div class="menu-block menu-block-center">
                           <div class="menu-block-1">
@@ -224,46 +219,6 @@
                           </div>
                           <div class="menu-block-3 hidden-sm">
                             <div class="mega-menu-img"> <a href="shop_grid.html"><img src="images/slider/women-menu.jpg" alt="Bannar 1"></a> </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="megamenu"><a href="shop_grid.html">Trang <!--<span class="menu-item-tag menu-item-tag-new">new</span>--></a>
-                      <div class="mega-menu">
-                        <div class="menu-block menu-block-center">
-                          <div class="menu-block">
-                            <ul>
-                              <li> <a class="mega-title" href="#">Shop Pages </a></li>
-                              <li> <a href="shop_grid.html"> Shop grid </a></li>
-                              <li> <a href="shop_grid_right_sidebar.html"> Shop grid right sidebar</a> </li>
-                              <li> <a href="shop_list.html"> Shop list </a> </li>
-                              <li> <a href="shop_list_right_sidebar.html"> Shop list right sidebar</a> </li>
-                              <li> <a href="shop_grid_full_width.html"> Shop Full width </a> </li>
-                            </ul>
-                            <ul>
-                              <li> <a class="mega-title" href="#">Ecommerce Pages </a></li>
-                              <li> <a href="wishlist.html"> Wishlists </a> </li>
-                              <li><a href="checkout.html"> Checkout </a> </li>
-                              <li><a href="compare.html"> Compare </a> </li>
-                              <li><a href="shopping_cart.html"> Shopping cart </a></li>
-                              <li> <a href="faq.html"> FAQ </a> </li>
-                            </ul>
-                            <ul>
-                              <li> <a class="mega-title" href="#">Product Categories </a></li>
-                              <li><a href="single_product.html"> single product </a> </li>
-                              <li> <a href="single_product_right_sidebar.html"> single product right sidebar</a></li>
-                              <li><a href="single_product_left_sidebar.html"> single product left sidebar</a></li>
-                              <li><a href="single_product_magnific_popup.html"> single product magnific popup</a></li>
-                              <li><a href="cat-4-col-full.html"> 4 Column</a> </li>
-                            </ul>
-                            <ul>
-                              <li> <a class="mega-title" href="#">Static Pages </a></li>
-                              <li><a href="create_account_page.html"> Create Account Page </a> </li>
-                              <li> <a href="about_us.html"> About Us </a> </li>
-                              <li> <a href="contact_us.html"> Contact us </a></li>
-                              <li> <a href="404error.html"> Error 404 </a> </li>
-                              <li> <a href="register_page.html"> Register Page </a> </li>
-                            </ul>
                           </div>
                         </div>
                       </div>

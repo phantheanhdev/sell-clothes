@@ -10,55 +10,55 @@ class ProductController extends Controller
 {
     //======================= user ===========================
     // men
-    public function men_page()
-    {
-        $this->view_user('men/men');
-    }
 
     public function men_t_shirt()
     {
-        $this->view_user('men/men_t_shirt');
+        $product = ProductModel::get_data_by_condition('ct_id = 1');
+        $this->view_user('men/men_t_shirt', ['product' => $product]);
     }
 
     public function men_jackets()
     {
-        $this->view_user('men/men_jackets');
+        $product = ProductModel::get_data_by_condition('ct_id = 5');
+        $this->view_user('men/men_jackets', ['product' => $product]);
     }
 
     public function men_short()
     {
-        $this->view_user('men/men_short');
+        $product = ProductModel::get_data_by_condition('ct_id = 3');
+        $this->view_user('men/men_short', ['product' => $product]);
     }
 
     public function men_jean()
     {
-        $this->view_user('men/men_jean');
+        $product = ProductModel::get_data_by_condition('ct_id = 7');
+        $this->view_user('men/men_jean', ['product' => $product]);
     }
 
     // women
-    public function women_page()
-    {
-        $this->view_user('women/women');
-    }
 
     public function women_t_shirt()
     {
-        $this->view_user('women/wo_t_shirt');
+        $product = ProductModel::get_data_by_condition('ct_id = 2');
+        $this->view_user('women/wo_t_shirt', ['product' => $product]);
     }
 
     public function women_jackets()
     {
-        $this->view_user('women/wo_jackets');
+        $product = ProductModel::get_data_by_condition('ct_id = 6');
+        $this->view_user('women/wo_jackets', ['product' => $product]);
     }
 
     public function women_short()
     {
-        $this->view_user('women/wo_short');
+        $product = ProductModel::get_data_by_condition('ct_id = 4');
+        $this->view_user('women/wo_short', ['product' => $product]);
     }
 
     public function women_jean()
     {
-        $this->view_user('women/wo_jean');
+        $product = ProductModel::get_data_by_condition('ct_id = 8');
+        $this->view_user('women/wo_jean', ['product' => $product]);
     }
 
     // =============== admin =======================
