@@ -34,7 +34,9 @@ Router::get('/women_jean', [ProductController::class, 'women_jean']);
 // users
 Router::get('/log_in', [UserController::class, 'log_in']);
 Router::post('/submit_log_in', [UserController::class, 'submit_log_in']);
+Router::get('/log_out', [UserController::class, 'log_out']);
 Router::get('/register', [UserController::class, 'register']);
+Router::post('/save_register', [UserController::class, 'save_register']);
 
 // shopping cart
 Router::get('/cart', [CartController::class, 'cart']);

@@ -62,34 +62,26 @@
               <div class="headerlinkmenu col-md-7 col-sm-7 col-xs-12">
                 <!-- Default Welcome Message -->
                 <div class="welcome-msg hidden-xs">Chào mừng tới FANCY</div>
-                <ul class="links">
+                <?php
+                if (isset($_SESSION) && !empty($_SESSION['user']['full_name'])) {
+                  if ($_SESSION['user']['role'] == 0) {
+                    echo '<ul class="links">
+                    <li><a href="/ad_list_pro">Vào trang admin</a></li>
+                    <li><a href="/log_out">Đăng xuất</a></li>
+                  </ul>';
+                  } else {
+                    echo '<ul class="links">
+                    <li><a href="/log_out">Đăng xuất</a></li>
+                  </ul> ';
+                  }
+                } else {
+                  echo '<ul class="links">
                   <li><a href="/register">Đăng ký</a></li>
                   <li><a href="/log_in">Đăng nhập</a></li>
-                  <li><a href="/ad_list_pro">qua admin hehe</a></li>
-                </ul>
+                </ul> ';
+                }
+                ?>
 
-                <!-- đổi ngôn ngữ và đổi loại tiền -->
-                <!-- <div class="language-currency-wrapper pull-right">
-                <div class="inner-cl">
-                  <div class="block block-language form-language">
-                    <div class="lg-cur"> <span> <span class="lg-fr">English</span> <i class="fa fa-angle-down"></i> </span> </div>
-                    <ul>
-                      <li> <a href="#"><span>German</span> </a> </li>
-                      <li> <a href="#"><span>Brazil</span> </a> </li>
-                      <li> <a href="#"><span>Chile</span> </a> </li>
-                      <li> <a href="#"><span>Spain</span> </a> </li>
-                    </ul>
-                  </div>
-                  <div class="block block-currency">
-                    <div class="item-cur"> <span>USD </span> <i class="fa fa-angle-down"></i></div>
-                    <ul>
-                      <li> <a href="#"><span class="cur_icon">€</span> EUR</a> </li>
-                      <li> <a href="#"><span class="cur_icon">¥</span> JPY</a> </li>
-                      <li> <a class="selected" href="#"><span class="cur_icon">$</span> USD</a> </li>
-                    </ul>
-                  </div>
-                </div>
-              </div> -->
               </div>
             </div>
           </div>
@@ -105,21 +97,6 @@
               <div id="search">
                 <form>
                   <div class="input-group">
-                    <!-- tìm kiếm theo loại hàng -->
-                    <!-- <select class="cate-dropdown hidden-xs hidden-sm" name="category_id">
-                    <option>All Categories</option>
-                    <option>women</option>
-                    <option>&nbsp;&nbsp;&nbsp;Accessories </option>
-                    <option>&nbsp;&nbsp;&nbsp;Dresses</option>
-                    <option>&nbsp;&nbsp;&nbsp;Top</option>
-                    <option>&nbsp;&nbsp;&nbsp;Handbags </option>
-                    <option>&nbsp;&nbsp;&nbsp;Shoes </option>
-                    <option>&nbsp;&nbsp;&nbsp;Clothing </option>
-                    <option>Men</option>
-                    <option>Electronics</option>
-                    <option>&nbsp;&nbsp;&nbsp;Mobiles </option>
-                    <option>&nbsp;&nbsp;&nbsp;Music &amp; Audio </option>
-                  </select> -->
                     <input type="text" class="form-control" placeholder="Search" name="search">
                     <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
                   </div>
@@ -142,9 +119,16 @@
                 </a>
               </div>
               <!-- End shopping cart trigger -->
-              <a href="/log_in" class="top-my-account">
+              <?php
+              if (isset($_SESSION) && !empty($_SESSION['user']['full_name'])) {
+                $a = $_SESSION['user']['full_name'];
+                echo "<h4>Xin chào: " . $a . "</h4>";
+              } else {
+                echo '<a href="/log_in" class="top-my-account">
                 <i class="fa fa-user"></i>
-              </a>
+                    </a>';
+              }
+              ?>
 
               <!-- so sánh sản phẩm -->
               <!-- <a href="compare.html" class="top-compare">
@@ -218,7 +202,7 @@
                             </ul>
                           </div>
                           <div class="menu-block-3 hidden-sm">
-                            <div class="mega-menu-img"> <a href="shop_grid.html"><img src="images/slider/women-menu.jpg" alt="Bannar 1"></a> </div>
+                            <div class="mega-menu-img"> <a href="#"><img src="images/slider/women-menu.jpg" alt="Bannar 1"></a> </div>
                           </div>
                         </div>
                       </div>
