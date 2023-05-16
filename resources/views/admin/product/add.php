@@ -66,8 +66,6 @@
         let pro_img = document.querySelector('#pro_img').value
         let err_pro_img = document.querySelector('#err_pro_img')
 
-        console.log(pro_img)
-
         const flag = {
             name: false,
             price: false,

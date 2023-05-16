@@ -137,7 +137,6 @@
                   rồi qua file footer bỏ comment phần 
                 -->
 
-
                   <i class="fa fa-shopping-bag"></i>
                   <!-- <span class="cart-num">2</span> -->
                 </a>
@@ -146,7 +145,7 @@
               <a href="/log_in" class="top-my-account">
                 <i class="fa fa-user"></i>
               </a>
-              
+
               <!-- so sánh sản phẩm -->
               <!-- <a href="compare.html" class="top-compare">
                 <i class="fa fa-signal"></i>
@@ -195,7 +194,11 @@
                             </ul>
                           </div>
                           <div class="menu-block-3 hidden-sm">
-                            <div class="mega-menu-img"> <a href="#"><img src="images/menu-img2.jpg" alt="Bannar 1"></a> </div>
+                            <div class="mega-menu-img">
+                              <a href="#">
+                                <img src="images/slider/men-menu.jpg" alt="Bannar 1">
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -220,7 +223,7 @@
                             </ul>
                           </div>
                           <div class="menu-block-3 hidden-sm">
-                            <div class="mega-menu-img"> <a href="shop_grid.html"><img src="images/menu-img2.jpg" alt="Bannar 1"></a> </div>
+                            <div class="mega-menu-img"> <a href="shop_grid.html"><img src="images/slider/women-menu.jpg" alt="Bannar 1"></a> </div>
                           </div>
                         </div>
                       </div>

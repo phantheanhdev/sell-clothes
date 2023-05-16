@@ -64,7 +64,7 @@ class ProductController extends Controller
     // =============== admin =======================
     public function ad_list_pro()
     {
-        $all_pro = ProductModel::all();
+        $all_pro = ProductModel::all_desc('pro_id');
         $all_categories = CategoryModel::all();
         $this->view_admin('product/list', ['all_pro' => $all_pro, 'all_categories' => $all_categories]);
     }

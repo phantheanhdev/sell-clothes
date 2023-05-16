@@ -52,14 +52,18 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             PRODUCTS
                         </a>
-                        <a class="nav-link" href="/ad-list-categories">
+                        <a class="nav-link" href="/ad_list_categories">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             CATEGORIES
                         </a>
-                        <!-- <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="/ad_list_size">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            SIZES
+                        </a>
+                        <a class="nav-link" href="/ad_list_categories">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             ACCOUNTS
-                        </a> -->
+                        </a>
                     </div>
                 </div>
             </nav>

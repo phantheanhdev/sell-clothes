@@ -27,12 +27,23 @@ class BaseModel
         // self: truy xuất đến class khai báo nó
 
         $model = new static;
-        $model->sqlBuilder = "SELECT * FROM $model->tableName";
+        $model->sqlBuilder = "SELECT * FROM $model->tableName ";
         $stmt = $model->conn->prepare($model->sqlBuilder);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_CLASS);
         return $result;
     }
+    // get data theo table sắp xếp theo thứ tự giảm dần
+    public static function all_desc($id_name)
+    {
+        $model = new static;
+        $model->sqlBuilder = "SELECT * FROM $model->tableName ORDER BY $id_name DESC";
+        $stmt = $model->conn->prepare($model->sqlBuilder);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+        return $result;
+    }
+
 
     //function insert: them du lieu 
     //params: $data la 1 mang du lieu co cau truc nhu sau
@@ -73,6 +84,27 @@ class BaseModel
     {
         $model = new static;
         $model->sqlBuilder = "SELECT * FROM $model->tableName WHERE $data";
+        $stmt = $model->conn->prepare($model->sqlBuilder);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+        return $result;
+    }
+
+    // new product 8
+    public static function new_produt_8()
+    {
+        $model = new static;
+        $model->sqlBuilder = "SELECT * FROM $model->tableName ORDER BY pro_id DESC LIMIT 8";
+        $stmt = $model->conn->prepare($model->sqlBuilder);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+        return $result;
+    }
+    //  8 sản phẩm được quan tâm nhiều nhất
+    public static function products_of_interest_8()
+    {
+        $model = new static;
+        $model->sqlBuilder = "SELECT * FROM $model->tableName ORDER BY pro_view DESC LIMIT 8";
         $stmt = $model->conn->prepare($model->sqlBuilder);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_CLASS);
