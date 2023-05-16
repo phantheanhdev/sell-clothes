@@ -69,4 +69,3 @@ Router::post('/ad_save_update_size', [SizeController::class, 'ad_save_update_siz
 
 
 $router->resolve();
-// haha
