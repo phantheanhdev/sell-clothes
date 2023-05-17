@@ -26,7 +26,7 @@
     const validate = () => {
         let pro_name = document.querySelector('#pro_name').value
         let err_pro_name = document.querySelector('#err_pro_name')
-        let reg_pro_name = /^[\p{L}\s0-9_]{1,50}$/u;
+        let reg_pro_name = /^[\p{L}\s0-9_]{1,10}$/u;
 
         const flag = {
             name: false
@@ -36,7 +36,7 @@
             err_pro_name.innerHTML = "Không được để trống"
             flag.name = true;
         } else if (!reg_pro_name.test(pro_name)) {
-            err_pro_name.innerHTML = "Tên loại có thể chứa kí tự a-z A-Z 0-9, độ dài tối thiểu 1 kí tự, tối đa 50"
+            err_pro_name.innerHTML = "Tên loại có thể chứa kí tự a-z A-Z 0-9, độ dài tối thiểu 1 kí tự, tối đa 10"
             flag.name = true;
         } else {
             err_pro_name.innerHTML = "";

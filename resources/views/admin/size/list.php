@@ -2,6 +2,12 @@
 <a href="/ad_add_size">
     <button type="button" class="btn btn-outline-secondary mb-4 mt-3">Add</button>
 </a>
+<h5 style="color: red;"><?php
+                        if (isset($_COOKIE['success']) && !empty($_COOKIE['success'])) {
+                            echo $_COOKIE['success'];
+                        }
+                        ?></h5>
+
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>

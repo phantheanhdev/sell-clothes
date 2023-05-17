@@ -42,7 +42,7 @@
         <!-- img -->
         <div class="mb-3 row">
             <div class="col-sm-6">
-                <label class="form-label">Image </label> 
+                <label class="form-label">Image </label>
                 <span style="color: red;">(nếu không chọn ảnh, sẽ dùng ảnh hiện tại)</span>
                 <input type="file" class="form-control" name="pro_img" multiple id="pro_img">
                 <span class="form-text" style="color: red;" id="err_pro_img"> </span>
@@ -74,7 +74,7 @@
         // 
         let pro_desc = document.querySelector('#pro_desc').value
         let err_pro_desc = document.querySelector('#err_pro_desc')
-        let reg_pro_desc = /^[\p{L}\p{N}\s.,;:_\-(){}\[\]'"?!@#$%^&*+=/\\]{50,1000}$/u
+        let reg_pro_desc = /^[\p{L}\p{N}\s.,;:_\-(){}\[\]'"?!@#$%^&*+=<>{\}[\]\\|]{30,1000}$/u
         // 
         let pro_img = document.querySelector('#pro_img').value
         let err_pro_img = document.querySelector('#err_pro_img')
@@ -114,7 +114,7 @@
             err_pro_desc.innerHTML = "Không được để trống"
             flag.desc = true;
         } else if (!reg_pro_desc.test(pro_desc)) {
-            err_pro_desc.innerHTML = "Mô tả có độ dài tối thiểu 50 kí tự tối đa 1000"
+            err_pro_desc.innerHTML = "Mô tả có độ dài tối thiểu 30 kí tự tối đa 1000"
             flag.desc = true;
         } else {
             err_pro_desc.innerHTML = "";

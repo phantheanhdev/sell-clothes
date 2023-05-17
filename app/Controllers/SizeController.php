@@ -20,6 +20,8 @@ class SizeController extends Controller
 
     public function ad_save_add_size(Request $request)
     {
+        setcookie('success', "Thêm thành công", time() + 1, "/");
+
         $size = $request->getBody();
 
         $p = new SizeModel();
@@ -30,6 +32,8 @@ class SizeController extends Controller
 
     public function ad_delete_size(Request $request)
     {
+        setcookie('success', "Xóa thành công", time() + 1, "/");
+
         $id = $request->getBody()['id'];
         $p = new SizeModel();
         $p->delete('sz_id', $id);
@@ -49,6 +53,8 @@ class SizeController extends Controller
 
     public function ad_save_update_size(Request $request)
     {
+        setcookie('success', "Cập nhật thành công", time() + 1, "/");
+
         $data = $request->getBody();
 
         $p = new SizeModel();

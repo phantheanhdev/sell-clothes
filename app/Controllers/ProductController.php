@@ -76,6 +76,8 @@ class ProductController extends Controller
     }
     public function ad_save_add_pro(Request $request)
     {
+        setcookie('success', "Thêm thành công", time() + 1, "/");
+
         $product = $request->getBody();
         $product['pro_img'] = $_FILES['pro_img']['name'];
 
@@ -88,6 +90,8 @@ class ProductController extends Controller
     }
     public function ad_delete_pro(Request $request)
     {
+        setcookie('success', "Xóa thành công", time() + 1, "/");
+
         $id = $request->getBody()['id'];
         $p = new ProductModel();
         $p->delete('pro_id', $id);
@@ -96,6 +100,7 @@ class ProductController extends Controller
     }
     public function ad_update_pro(Request $request)
     {
+
         $id = $request->getBody()['id'];
         $product = ProductModel::findOne('pro_id', $id);
         $all_categories = CategoryModel::all();
@@ -107,7 +112,8 @@ class ProductController extends Controller
     }
     public function ad_save_update_pro(Request $request)
     {
-        // $id = $request->getBody()['id'];
+        setcookie('success', "Cập nhật thành công", time() + 1, "/");
+
         $data = $request->getBody();
 
         $id_pro = $data['pro_id'];

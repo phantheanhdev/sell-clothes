@@ -20,6 +20,8 @@ class CategoryController extends Controller
 
     public function ad_save_add_categories(Request $request)
     {
+        setcookie('success', "Thêm thành công", time() + 1, "/");
+
         $category = $request->getBody();
 
         $p = new CategoryModel();
@@ -30,6 +32,8 @@ class CategoryController extends Controller
 
     public function ad_detele_categories(Request $request)
     {
+        setcookie('success', "Xóa thành công", time() + 1, "/");
+
         $id = $request->getBody()['id'];
         $p = new CategoryModel();
         $p->delete('ct_id', $id);
@@ -49,6 +53,8 @@ class CategoryController extends Controller
 
     public function ad_save_update_categories(Request $request)
     {
+        setcookie('success', "Cập nhật thành công", time() + 1, "/");
+
         $data = $request->getBody();
 
         $p = new CategoryModel();

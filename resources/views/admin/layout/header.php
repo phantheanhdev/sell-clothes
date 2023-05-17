@@ -60,9 +60,9 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             SIZES
                         </a>
-                        <a class="nav-link" href="/ad_list_categories">
+                        <a class="nav-link" href="/ad_list_user">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            ACCOUNTS
+                            USERS
                         </a>
                     </div>
                 </div>

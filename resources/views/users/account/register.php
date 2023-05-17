@@ -25,6 +25,11 @@
                                 <div class="check-title">
                                     <h4>Đăng ký</h4>
                                 </div>
+                                <span style="color: red;"><?php
+                                                            if (isset($_COOKIE['err']) && !empty($_COOKIE['err'])) {
+                                                                echo $_COOKIE['err'];
+                                                            }
+                                                            ?></span>
                             </div>
                             <div class="col-sm-12">
                                 <label>Họ và tên:</label>
@@ -106,7 +111,8 @@
         // 
         let address = document.querySelector('#address').value
         let err_address = document.querySelector('#err_address')
-        let reg_address = /^[\p{L}\s0-9_]{10,500}$/u;
+        let reg_address = /^[\p{L}\s0-9_,]{10,500}$/u;
+
         // 
         let email = document.querySelector('#email').value
         let err_email = document.querySelector('#err_email')
