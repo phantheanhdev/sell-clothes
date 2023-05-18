@@ -3,7 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\ColorModel;
 use App\Models\ProductModel;
+use App\Models\SizeModel;
 use App\Request;
 
 class ProductController extends Controller
@@ -20,7 +22,20 @@ class ProductController extends Controller
     // single product
     public function single_product()
     {
-        $this->view_user('product/single_product');
+        $id = $_GET['id'];
+        $all_color = ColorModel::all();
+        $all_size = SizeModel::all();
+        $single_pro = ProductModel::findOne('pro_id', $id);
+        $ct_id_single_pro = $single_pro->ct_id;
+
+        $similar_pro = ProductModel::get_data_by_condition("ct_id = $ct_id_single_pro");
+
+        $this->view_user('product/single_product', [
+            'single_pro' => $single_pro,
+            'all_color' => $all_color,
+            'all_size' => $all_size,
+            'similar_pro' => $similar_pro
+        ]);
     }
 
     // =============== admin =======================
