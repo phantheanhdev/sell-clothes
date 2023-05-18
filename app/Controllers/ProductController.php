@@ -61,6 +61,13 @@ class ProductController extends Controller
         $this->view_user('women/wo_jean', ['product' => $product]);
     }
 
+    // single product
+    public function single_product()
+    {
+        $this->view_user('single_product');
+    }
+
+
     // =============== admin =======================
     public function ad_list_pro()
     {

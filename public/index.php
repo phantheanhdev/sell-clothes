@@ -41,6 +41,10 @@ Router::post('/save_register', [UserController::class, 'save_register']);
 // shopping cart
 Router::get('/cart', [CartController::class, 'cart']);
 
+// single product
+Router::get('/single_product', [ProductController::class, 'single_product']);
+
+
 // ================ admin ====================
 // products
 Router::get('/ad_list_pro', [ProductController::class, 'ad_list_pro']);

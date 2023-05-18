@@ -98,6 +98,7 @@
                                     foreach ($new_product_8 as $value_new_pro_8) {
 
                                     ?>
+
                                       <div class="product-item col-md-3 col-sm-6">
                                           <div class="item-inner">
                                               <div class="product-thumbnail">
@@ -114,13 +115,13 @@
                                                   <div class="slider-items-products">
                                                       <div id="pro1-slider" class="product-flexslider hidden-buttons">
                                                           <div class="slider-items slider-width-col6">
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $value_new_pro_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $value_new_pro_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $value_new_pro_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
                                                           </div>
@@ -131,7 +132,7 @@
                                                   <div class="item-info">
                                                       <div class="info-inner">
                                                           <div class="item-title">
-                                                              <h4> <a title="Product Title Here" href="single_product.html">
+                                                              <h4> <a title="Product Title Here" href="/single_product?id=<?= $value_new_pro_8->pro_id ?>">
                                                                       <?= $value_new_pro_8->pro_name ?>
                                                                   </a></h4>
                                                           </div>
@@ -140,9 +141,12 @@
                                                               <!-- <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> -->
                                                               <div class="item-price">
                                                                   <div class="price-box">
-                                                                      <p class="special-price"> <span class="price-label">Special Price</span> <span class="price">
+                                                                      <p class="special-price">
+                                                                          <span class="price-label">Special Price</span>
+                                                                          <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="price">
                                                                               <?= $value_new_pro_8->pro_price ?> VNĐ
-                                                                          </span> </p>
+                                                                          </a>
+                                                                      </p>
                                                                       <!-- giảm giá  -->
                                                                       <!-- <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $399.00 </span> </p> -->
                                                                   </div>
@@ -161,6 +165,7 @@
                                           </div>
                                       </div>
                                       <!--  -->
+
                                   <?php
                                     }
                                     ?>
@@ -196,13 +201,13 @@
                                                   <div class="slider-items-products">
                                                       <div id="pro1-slider" class="product-flexslider hidden-buttons">
                                                           <div class="slider-items slider-width-col6">
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="single_product.html" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
                                                           </div>
@@ -213,7 +218,7 @@
                                                   <div class="item-info">
                                                       <div class="info-inner">
                                                           <div class="item-title">
-                                                              <h4> <a title="Product Title Here" href="single_product.html">
+                                                              <h4> <a title="Product Title Here" href="/single_product?id=<?= $value_new_pro_8->pro_id ?>">
                                                                       <?= $products_of_interest_8->pro_name ?>
                                                                   </a></h4>
                                                           </div>
@@ -221,9 +226,9 @@
                                                               <div class="item-price">
                                                                   <div class="price-box">
                                                                       <p class="special-price"> <span class="price-label">Special Price</span>
-                                                                          <span class="price">
-                                                                              <?= $products_of_interest_8->pro_price ?>
-                                                                          </span>
+                                                                          <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="price">
+                                                                              <?= $products_of_interest_8->pro_price ?> VNĐ
+                                                                          </a>
                                                                       </p>
                                                                   </div>
                                                               </div>
