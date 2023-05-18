@@ -53,7 +53,7 @@
                                                       <div class="btn-quickview">
                                                       </div>
                                                   </div>
-                                                  <a href="" class="product-item-photo">
+                                                  <a href="/single_product?id=<?= $product->pro_id ?>" class="product-item-photo">
                                                       <img class="product-image-photo" src="images/products/<?= $product->pro_img ?>" alt="" width="200px" height="220px">
                                                   </a>
                                               </div>
@@ -61,7 +61,7 @@
                                                   <div class="item-info">
                                                       <div class="info-inner">
                                                           <div class="item-title">
-                                                              <h4><a title="Ipsums Dolors Untra" href="">
+                                                              <h4><a title="Ipsums Dolors Untra" href="/single_product?id=<?= $product->pro_id ?>">
                                                                       <?= $product->pro_name ?>
                                                                   </a></h4>
                                                           </div>
@@ -70,7 +70,7 @@
                                                                   <div class="price-box">
                                                                       <p class="special-price">
                                                                           <span class="price-label">Special Price</span>
-                                                                          <span class="price"> <?= $product->pro_price ?> VNĐ </span>
+                                                                          <a href="/single_product?id=<?= $product->pro_id ?>" class="price"> <?= $product->pro_price ?> VNĐ </a>
                                                                       </p>
                                                                   </div>
                                                               </div>
