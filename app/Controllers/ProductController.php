@@ -9,64 +9,19 @@ use App\Request;
 class ProductController extends Controller
 {
     //======================= user ===========================
-    // men
-
-    public function men_t_shirt()
+    // products_by_type
+    public function products_by_type()
     {
-        $product = ProductModel::get_data_by_condition('ct_id = 1');
-        $this->view_user('men/men_t_shirt', ['product' => $product]);
-    }
-
-    public function men_jackets()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 5');
-        $this->view_user('men/men_jackets', ['product' => $product]);
-    }
-
-    public function men_short()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 3');
-        $this->view_user('men/men_short', ['product' => $product]);
-    }
-
-    public function men_jean()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 7');
-        $this->view_user('men/men_jean', ['product' => $product]);
-    }
-
-    // women
-
-    public function women_t_shirt()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 2');
-        $this->view_user('women/wo_t_shirt', ['product' => $product]);
-    }
-
-    public function women_jackets()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 6');
-        $this->view_user('women/wo_jackets', ['product' => $product]);
-    }
-
-    public function women_short()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 4');
-        $this->view_user('women/wo_short', ['product' => $product]);
-    }
-
-    public function women_jean()
-    {
-        $product = ProductModel::get_data_by_condition('ct_id = 8');
-        $this->view_user('women/wo_jean', ['product' => $product]);
+        $ct_id = $_GET['ct_id'];
+        $product = ProductModel::get_data_by_condition("ct_id = $ct_id");
+        $this->view_user('product/products_by_type', ['product' => $product]);
     }
 
     // single product
     public function single_product()
     {
-        $this->view_user('single_product');
+        $this->view_user('product/single_product');
     }
-
 
     // =============== admin =======================
     public function ad_list_pro()

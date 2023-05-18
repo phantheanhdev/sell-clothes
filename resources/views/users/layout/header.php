@@ -161,15 +161,15 @@
                               <li> <a class="mega-title" href="#">Áo
                                   <!-- <span class="menu-item-tag menu-item-tag-hot">hot</span> -->
                                 </a></li>
-                              <li><a href="/men_t_shirt">Áo phông</a></li>
-                              <li> <a href="/men_jackets">Áo khoác</a></li>
+                              <li><a href="/products_by_type?ct_id=1">Áo phông</a></li>
+                              <li> <a href="/products_by_type?ct_id=5">Áo khoác</a></li>
                             </ul>
                             <ul>
                               <li> <a class="mega-title" href="#">Quần
                                   <!-- <span class="menu-item-tag menu-item-tag-hot">Sale</span> -->
                                 </a></li>
-                              <li> <a href="/men_short">Quần short</a></li>
-                              <li> <a href="/men_jean">Quần jean</a></li>
+                              <li> <a href="/products_by_type?ct_id=3">Quần short</a></li>
+                              <li> <a href="/products_by_type?ct_id=7">Quần jean</a></li>
                             </ul>
                           </div>
                           <div class="menu-block-3 hidden-sm">
@@ -190,15 +190,15 @@
                               <li> <a class="mega-title" href="#">Áo
                                   <!-- <span class="menu-item-tag menu-item-tag-hot">hot</span> -->
                                 </a></li>
-                              <li><a href="/women_t_shirt">Áo phông</a></li>
-                              <li> <a href="/women_jackets">Áo khoác</a></li>
+                              <li><a href="/products_by_type?ct_id=2">Áo phông</a></li>
+                              <li> <a href="/products_by_type?ct_id=6">Áo khoác</a></li>
                             </ul>
                             <ul>
                               <li> <a class="mega-title" href="#">Quần
                                   <!-- <span class="menu-item-tag menu-item-tag-hot">Sale</span> -->
                                 </a></li>
-                              <li> <a href="/women_short">Quần short</a></li>
-                              <li> <a href="/women_jean">Quần jean</a></li>
+                              <li> <a href="/products_by_type?ct_id=4">Quần short</a></li>
+                              <li> <a href="/products_by_type?ct_id=8">Quần jean</a></li>
                             </ul>
                           </div>
                           <div class="menu-block-3 hidden-sm">
@@ -207,7 +207,7 @@
                         </div>
                       </div>
                     </li>
-                    <li><a href="contact_us.html">Liên hệ</a></li>
+                    <li><a href="##">Liên hệ</a></li>
                   </ul>
                   <span class="phone hidden-xs hidden-sm"><i class="fa fa-phone fa-lg"></i> +84 328588478</span>
                   <!-- <a href="#" class="buy-theme">

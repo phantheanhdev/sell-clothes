@@ -19,17 +19,8 @@ $router = new Router;
 Router::get('/', [HomeController::class, 'index']);
 Router::get('/home', [HomeController::class, 'index']);
 
-// men 
-Router::get('/men_t_shirt', [ProductController::class, 'men_t_shirt']);
-Router::get('/men_jackets', [ProductController::class, 'men_jackets']);
-Router::get('/men_short', [ProductController::class, 'men_short']);
-Router::get('/men_jean', [ProductController::class, 'men_jean']);
-
-// women 
-Router::get('/women_t_shirt', [ProductController::class, 'women_t_shirt']);
-Router::get('/women_jackets', [ProductController::class, 'women_jackets']);
-Router::get('/women_short', [ProductController::class, 'women_short']);
-Router::get('/women_jean', [ProductController::class, 'women_jean']);
+// product by type 
+Router::get('/products_by_type', [ProductController::class, 'products_by_type']);
 
 // users
 Router::get('/log_in', [UserController::class, 'log_in']);
