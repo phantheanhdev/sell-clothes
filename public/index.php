@@ -4,6 +4,7 @@ session_start();
 
 use App\Controllers\CartController;
 use App\Controllers\CategoryController;
+use App\Controllers\ColorController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\SizeController;
@@ -68,6 +69,14 @@ Router::post('/ad_save_add_user', [UserController::class, 'ad_save_add_user']);
 Router::get('/ad_delete_user', [UserController::class, 'ad_delete_user']);
 Router::get('/ad_update_user', [UserController::class, 'ad_update_user']);
 Router::post('/ad_save_update_user', [UserController::class, 'ad_save_update_user']);
+
+// color 
+Router::get('/ad_list_color', [ColorController::class, 'ad_list_color']);
+Router::get('/ad_add_color', [ColorController::class, 'ad_add_color']);
+Router::post('/ad_save_add_color', [ColorController::class, 'ad_save_add_color']);
+Router::get('/ad_delete_color', [ColorController::class, 'ad_delete_color']);
+Router::get('/ad_update_color', [ColorController::class, 'ad_update_color']);
+Router::post('/ad_save_update_color', [ColorController::class, 'ad_save_update_color']);
 
 
 $router->resolve();

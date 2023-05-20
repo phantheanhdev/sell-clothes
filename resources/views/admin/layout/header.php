@@ -64,6 +64,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             USERS
                         </a>
+                        <a class="nav-link" href="/ad_list_color">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            COLORS
+                        </a>
                     </div>
                 </div>
             </nav>
