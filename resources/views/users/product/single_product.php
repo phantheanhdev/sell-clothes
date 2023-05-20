@@ -8,18 +8,28 @@
 </div>
 <!-- Breadcrumbs End -->
 <!-- Main Container -->
+
 <div class="main-container col1-layout">
     <div class="container">
         <div class="row">
             <div class="col-main">
                 <div class="product-view-area">
                     <div class="product-big-image col-xs-12 col-sm-5 col-lg-5 col-md-5">
-                        <div class="large-image">
-                            <a href="images/products/<?= $single_pro->pro_img ?>" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20">
-                                <img class="zoom-img" src="images/products/<?= $single_pro->pro_img ?>" alt="products" width="487px" height="487px">
-                            </a>
-                        </div>
-                        <!-- end: more-images -->
+                        <!-- form -->
+                        <form action="/add_cart" method="post" enctype="multipart/form-data">
+
+                            <div class="large-image">
+                                <a href="images/products/<?= $single_pro->pro_img ?>" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20">
+                                    <img class="zoom-img" src="images/products/<?= $single_pro->pro_img ?>" alt="products" width="487px" height="487px">
+                                </a>
+                            </div>
+                            <!--  -->
+                            <input type="hidden" name="pro_id" value="<?= $single_pro->pro_id ?>">
+                            <input type="hidden" name="pro_img" value="<?= $single_pro->pro_img ?>">
+                            <input type="hidden" name="pro_name" value="<?= $single_pro->pro_name ?>">
+                            <input type="hidden" name="pro_price" value="<?= $single_pro->pro_price ?>">
+
+                            <!-- end: more-images -->
 
                     </div>
                     <div class="col-xs-12 col-sm-7 col-lg-7 col-md-7 product-details-area">
@@ -34,35 +44,44 @@
                         <div class="product-color-size-area">
                             <div class="color-area">
                                 <h2 class="saider-bar-title">Màu</h2>
-                                <select name="" id="" style="color:black;">
+                                <select name="cl_id" id="" style="color:black;">
                                     <?php
                                     foreach ($all_color as $all_color) { ?>
-                                        <option value="<?= $all_color->cl_name ?>"><?= $all_color->cl_name ?></option>
+                                        <option value="<?= $all_color->cl_id ?>"><?= $all_color->cl_name ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
                             <div class="size-area">
                                 <h2 class="saider-bar-title">Size</h2>
-                                <select name="" id="" style="color:black;">
+                                <select name="sz_id" id="" style="color:black;">
                                     <?php
                                     foreach ($all_size as $all_size) { ?>
-                                        <option value="<?= $all_size->sz_name ?>"><?= $all_size->sz_name ?></option>
+                                        <option value="<?= $all_size->sz_id ?>"><?= $all_size->sz_name ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
                         </div>
                         <div class="product-variation">
-                            <form action="#" method="post">
-                                <div class="cart-plus-minus">
-                                    <label for="qty">Số lượng:</label>
-                                    <div class="numbers-row">
-                                        <div onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="dec qtybutton"><i class="fa fa-minus">&nbsp;</i></div>
-                                        <input type="text" class="qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
-                                        <div onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="inc qtybutton"><i class="fa fa-plus">&nbsp;</i></div>
+                            <div class="cart-plus-minus">
+                                <label for="qty">Số lượng:</label>
+                                <div class="numbers-row">
+                                    <div onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 0 ) result.value--;return false;" class="dec qtybutton">
+                                        <i class="fa fa-minus">&nbsp;</i>
+                                    </div>
+
+                                    <input type="text" class="qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
+
+                                    <div onClick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="inc qtybutton">
+                                        <i class="fa fa-plus">&nbsp;</i>
                                     </div>
                                 </div>
-                                <button class="button pro-add-to-cart" title="Add to Cart" type="button"><span><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</span></button>
+                            </div>
+
+                            <button class="button pro-add-to-cart" title="Add to Cart" type="submit">
+                                <span><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</span>
+                            </button>
                             </form>
+                            <!-- end form -->
                         </div>
                     </div>
                 </div>
