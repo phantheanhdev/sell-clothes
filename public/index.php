@@ -38,6 +38,7 @@ Router::get('/cart_delete_all', [CartController::class, 'cart_delete_all']);
 
 // pay
 Router::get('/pay', [CartController::class, 'pay']);
+Router::get('/order', [CartController::class, 'order']);
 
 
 

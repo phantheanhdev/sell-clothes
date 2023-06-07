@@ -77,14 +77,54 @@
                     } ?>
 
                 </tbody>
-
             </table>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Phương thức thanh toán</h3>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img src="/images/pay/BIDV.jpg" alt="" width="400px" height="400px">
+                </div>
+                <div class="col-xs-6">
+                    <form action="">
+                        <div class="">
+                            <input type="radio" name="pttt" value="1">
+                            <label for="">Chuyển khoản</label>
+                        </div>
+                        <div class="">
+                            <input type="radio" name="pttt" value="2" checked>
+                            <label for="">Thanh toán khi nhận hàng</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" style="display: flex; flex-direction: row-reverse;">
+            <h3 id="total_money" style="color: red; margin-left: 20px;"></h3>
+            <h3>Tổng:</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-xs-10">
+            <h5>Nhấn "Đặt hàng" đồng nghĩa với việc bạn đồng ý tuân theo Điều khoản Fancy và Điều khoản và Điều kiện của hợp đồng Bảo hiểm</h5>
+        </div>
+        <div class="col-xs-2">
+            <a href="/order">
+                <button class="btn ">Đặt hàng</button>
+            </a>
         </div>
     </div>
 </div>
 
 <script>
-    // Function to calculate the total price for each product
     function calculateProductTotal() {
         var quantityElements = document.querySelectorAll('.qty');
         var priceElements = document.querySelectorAll('#price');
@@ -99,14 +139,32 @@
         }
     }
 
-    // Calculate the product totals when the page loads
-    window.addEventListener('load', calculateProductTotal);
+    function calculateTotalMoney() {
+        var totalMoney = 0;
+        var intoMoneyElements = document.querySelectorAll('#into_money');
 
-    // Calculate the product totals when the quantity or price changes
+        for (var i = 0; i < intoMoneyElements.length; i++) {
+            var money = parseFloat(intoMoneyElements[i].textContent);
+            totalMoney += money;
+        }
+
+        var totalMoneyElement = document.getElementById('total_money');
+        if (totalMoneyElement) {
+            totalMoneyElement.textContent = totalMoney.toFixed(0);
+        }
+    }
+
+    function calculateTotals() {
+        calculateProductTotal();
+        calculateTotalMoney();
+    }
+
+    window.addEventListener('load', calculateTotals);
+
     var quantityElements = document.querySelectorAll('.qty');
     var priceElements = document.querySelectorAll('#price');
     for (var i = 0; i < quantityElements.length; i++) {
-        quantityElements[i].addEventListener('input', calculateProductTotal);
-        priceElements[i].addEventListener('input', calculateProductTotal);
+        quantityElements[i].addEventListener('input', calculateTotals);
+        priceElements[i].addEventListener('input', calculateTotals);
     }
 </script>

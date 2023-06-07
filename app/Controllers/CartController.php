@@ -61,7 +61,12 @@ class CartController extends Controller
                 ]
             );
         } else {
+            setcookie('err', "Bạn cần đăng nhập để mua hàng", time() + 1, "/");
             header('location: /log_in');
         }
+    }
+    public function order()
+    {
+        $this->view_user('order');
     }
 }
