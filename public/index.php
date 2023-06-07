@@ -33,6 +33,13 @@ Router::post('/save_register', [UserController::class, 'save_register']);
 // shopping cart
 Router::get('/cart', [CartController::class, 'cart']);
 Router::post('/add_cart', [CartController::class, 'add_cart']);
+Router::get('/cart_delete_one', [CartController::class, 'cart_delete_one']);
+Router::get('/cart_delete_all', [CartController::class, 'cart_delete_all']);
+
+// pay
+Router::get('/pay', [CartController::class, 'pay']);
+
+
 
 // single product
 Router::get('/single_product', [ProductController::class, 'single_product']);

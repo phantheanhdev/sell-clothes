@@ -22,6 +22,7 @@
 
   <!-- CSS Style -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="cms-index-index cms-home-page">

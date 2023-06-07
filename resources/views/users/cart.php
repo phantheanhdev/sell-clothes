@@ -25,8 +25,9 @@
                                 </thead>
                                 <tbody>
                                     <?php
+
                                     if (isset($_SESSION['list_cart']) && !empty($_SESSION['list_cart'])) {
-                                        foreach ($_SESSION['list_cart'] as $list_cart) {
+                                        foreach ($_SESSION['list_cart'] as $key_list_cart => $list_cart) {
                                     ?>
                                             <tr>
                                                 <td class="cart_product">
@@ -37,12 +38,35 @@
                                                 <td class="cart_description">
                                                     <p class="product-name"><?= $list_cart['pro_name'] ?></p>
                                                 </td>
-                                                <td class="availability in-stock">aaa</td>
+                                                <?php
+                                                foreach ($all_colors as $colors) {
+                                                    if ($list_cart['cl_id'] == $colors->cl_id) {
+                                                ?>
+                                                        <td class="availability in-stock"><?= $colors->cl_name ?></td>
+                                                <?php
+                                                    }
+                                                } ?>
 
-                                                <td class="price"><span>$49.88</span></td>
-                                                <td class="qty"><input class="form-control input-sm" type="text" value="1"></td>
-                                                <td class="price"><span>$49.88</span></td>
-                                                <td class="action"><a href="#"><i class="icon-close"></i></a></td>
+                                                <?php
+                                                foreach ($all_sizes as $sizes) {
+                                                    if ($list_cart['sz_id'] == $sizes->sz_id) {
+                                                ?>
+                                                        <td class="availability in-stock"><?= $sizes->sz_name ?></td>
+                                                <?php
+                                                    }
+                                                } ?>
+                                                <td class="availability in-stock qty">
+                                                    <input type="number" min="1" max="10" value="<?= $list_cart['qty'] ?>" required disabled>
+                                                </td>
+
+                                                <td class="price">
+                                                    <span><?= $list_cart['pro_price'] ?></span>
+                                                </td>
+                                                <td class="action">
+                                                    <a href="/cart_delete_one?id=<?= $key_list_cart ?>">
+                                                        <button>Xóa</button>
+                                                    </a>
+                                                </td>
                                             </tr>
                                     <?php
                                         }
@@ -56,9 +80,11 @@
                                                     <span>Tiếp tục mua sắm</span>
                                                 </button>
                                             </a>
-                                            <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart" class="button btn-empty" id="empty_cart_button">
-                                                <span>Xóa tất cả sản phẩm</span>
-                                            </button>
+                                            <a href="/cart_delete_all">
+                                                <button type="submit" name="update_cart_action" value="empty_cart" title="Clear Cart" class="button btn-empty" id="empty_cart_button">
+                                                    <span>Xóa tất cả sản phẩm</span>
+                                                </button>
+                                            </a>
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -87,23 +113,27 @@
                                         <col width="1">
                                     </colgroup>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <td class="a-left" colspan="1">Tiền sản phẩm</td>
                                             <td class="a-right"><span class="price">$249.98</span></td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                     <tfoot>
                                         <tr>
                                             <td class="a-left" colspan="1"> <strong>Tổng cộng</strong> </td>
-                                            <td class="a-right"><strong>
-                                                    <span class="price">$249.98</span>
+                                            <td class="a-right total-price"><strong>
+                                                    <span class="price" id="total-price"></span>
                                                 </strong></td>
                                         </tr>
                                     </tfoot>
                                 </table>
                                 <ul class="checkout">
                                     <li>
-                                        <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout"><span>Mua hàng</span></button>
+                                        <a href="/pay">
+                                            <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout">
+                                                <span>Mua hàng</span>
+                                            </button>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -116,3 +146,34 @@
         </div>
     </div>
 </section>
+
+<script>
+    // Function to calculate the total price
+    function calculateTotalPrice() {
+        var totalPrice = 0;
+        var quantityElements = document.querySelectorAll('.qty input');
+        var priceElements = document.querySelectorAll('.price span');
+
+        for (var i = 0; i < quantityElements.length; i++) {
+            var quantity = parseInt(quantityElements[i].value);
+            var price = parseFloat(priceElements[i].textContent);
+            var productPrice = quantity * price;
+            totalPrice += productPrice;
+        }
+
+        // Display the total price
+        var totalPriceElement = document.getElementById('total-price');
+        if (totalPriceElement) {
+            totalPriceElement.textContent = totalPrice.toFixed(0);
+        }
+    }
+
+    // Calculate the total price when the page loads
+    window.addEventListener('load', calculateTotalPrice);
+
+    // Calculate the total price when the quantity of a product changes
+    var quantityInputs = document.querySelectorAll('.qty input');
+    for (var i = 0; i < quantityInputs.length; i++) {
+        quantityInputs[i].addEventListener('change', calculateTotalPrice);
+    }
+</script>

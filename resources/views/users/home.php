@@ -157,7 +157,9 @@
                                                   <div class="box-hover">
                                                       <div class="product-item-actions">
                                                           <div class="pro-actions">
-                                                              <button onclick="location.href='shopping_cart.html'" class="action add-to-cart" type="button" title="Add to Cart"> <span>Add to Cart</span> </button>
+                                                              <button onclick="location.href='/single_product?id=<?= $value_new_pro_8->pro_id ?>'" class="action add-to-cart" type="button" title="Add to Cart">
+                                                                  <span>Xem chi tiết</span>
+                                                              </button>
                                                           </div>
                                                       </div>
                                                   </div>
@@ -201,13 +203,13 @@
                                                   <div class="slider-items-products">
                                                       <div id="pro1-slider" class="product-flexslider hidden-buttons">
                                                           <div class="slider-items slider-width-col6">
-                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $products_of_interest_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $products_of_interest_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
-                                                              <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="product-item-photo">
+                                                              <a href="/single_product?id=<?= $products_of_interest_8->pro_id ?>" class="product-item-photo">
                                                                   <img class="product-image-photo" src="images/products/<?= $products_of_interest_8->pro_img ?>" alt="" width="200px" height="220px">
                                                               </a>
                                                           </div>
@@ -218,7 +220,7 @@
                                                   <div class="item-info">
                                                       <div class="info-inner">
                                                           <div class="item-title">
-                                                              <h4> <a title="Product Title Here" href="/single_product?id=<?= $value_new_pro_8->pro_id ?>">
+                                                              <h4> <a title="Product Title Here" href="/single_product?id=<?= $products_of_interest_8->pro_id ?>">
                                                                       <?= $products_of_interest_8->pro_name ?>
                                                                   </a></h4>
                                                           </div>
@@ -226,7 +228,7 @@
                                                               <div class="item-price">
                                                                   <div class="price-box">
                                                                       <p class="special-price"> <span class="price-label">Special Price</span>
-                                                                          <a href="/single_product?id=<?= $value_new_pro_8->pro_id ?>" class="price">
+                                                                          <a href="/single_product?id=<?= $products_of_interest_8->pro_id ?>" class="price">
                                                                               <?= $products_of_interest_8->pro_price ?> VNĐ
                                                                           </a>
                                                                       </p>
@@ -238,7 +240,7 @@
                                                   <div class="box-hover">
                                                       <div class="product-item-actions">
                                                           <div class="pro-actions">
-                                                              <button onclick="location.href='shopping_cart.html'" class="action add-to-cart" type="button" title="Add to Cart"> <span>Add to Cart</span> </button>
+                                                              <button onclick="location.href='/single_product?id=<?= $products_of_interest_8->pro_id ?>'" class="action add-to-cart" type="button" title="Add to Cart"> <span>Xem chi tiết</span> </button>
                                                           </div>
                                                       </div>
                                                   </div>

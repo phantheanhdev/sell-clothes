@@ -15,7 +15,7 @@
               <div class="col-main col-sm-12 col-xs-12">
                   <div class="shop-inner">
                       <div class="page-title">
-                          <h2> Đồ nam</h2>
+                          <!-- <h2> Đồ nam</h2> -->
                       </div>
                       <div class="toolbar column">
                           <div class="sorter">
@@ -80,7 +80,9 @@
                                                   <div class="box-hover">
                                                       <div class="product-item-actions">
                                                           <div class="pro-actions">
-                                                              <button onclick="location.href='shopping_cart.html'" class="action add-to-cart" type="button" title="Add to Cart"> <span>Add to Cart</span> </button>
+                                                              <button onclick="location.href='/single_product?id=<?= $product->pro_id ?>'" class="action add-to-cart" type="button" title="Add to Cart">
+                                                                  <span>Xem chi tiết</span>
+                                                              </button>
                                                           </div>
 
                                                       </div>

@@ -131,6 +131,15 @@ class BaseModel
         $stmt->execute($data);
     }
 
+    // thêm số lượt xem
+    public function increase_views_pro($id)
+    {
+        $this->sqlBuilder = "UPDATE $this->tableName SET `pro_view` = `pro_view` + 1 WHERE $this->tableName.`pro_id` = ?";
+        $stmt = $this->conn->prepare($this->sqlBuilder);
+        $stmt->execute([$id]);
+    }
+
+
     // xóa dữ liệu
     public function delete($id_name, $id)
     {

@@ -28,7 +28,11 @@ class ProductController extends Controller
         $single_pro = ProductModel::findOne('pro_id', $id);
         $ct_id_single_pro = $single_pro->ct_id;
 
+        // $similar_pro : sản phẩm tương tự
         $similar_pro = ProductModel::get_data_by_condition("ct_id = $ct_id_single_pro");
+
+        $p = new ProductModel(); 
+        $p->increase_views_pro($id);
 
         $this->view_user('product/single_product', [
             'single_pro' => $single_pro,

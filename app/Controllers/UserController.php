@@ -20,27 +20,38 @@ class UserController extends Controller
         $acc_pass = $_POST['acc_pass'];
         $all_user = UserModel::all();
 
-        foreach ($all_user as $all_user) {
-            if ($acc_name == $all_user->us_acc_name  && $acc_pass == $all_user->us_pass) {
-                if ($all_user->us_role == 1) {
-                    $_SESSION['user']['full_name'] = $all_user->us_full_name;
+        $found = false; // Biến cờ để kiểm tra xem tài khoản và mật khẩu khớp có được tìm thấy hay không
+
+        foreach ($all_user as $user) {
+            if ($acc_name == $user->us_acc_name && $acc_pass == $user->us_pass) {
+                $found = true;
+                if ($user->us_role == 1) {
+                    $_SESSION['user']['full_name'] = $user->us_full_name;
+                    $_SESSION['user']['phone'] = $user->us_phone;
+                    $_SESSION['user']['address'] = $user->us_address;
                     $_SESSION['user']['role'] = 1;
                     header('location: /home');
-                } elseif ($all_user->us_role == 0) {
-                    $_SESSION['user']['full_name'] = $all_user->us_full_name;
+                } elseif ($user->us_role == 0) {
+                    $_SESSION['user']['full_name'] = $user->us_full_name;
+                    $_SESSION['user']['phone'] = $user->us_phone;
+                    $_SESSION['user']['address'] = $user->us_address;
                     $_SESSION['user']['role'] = 0;
                     header('location: /ad_list_pro');
                 }
-            } else {
-                setcookie('err', "Sai tài khoản hoặc mật khẩu", time() + 1, "/");
-                header('location: /log_in');
+                break; // Kết thúc vòng lặp sau khi tìm thấy tài khoản và mật khẩu khớp
             }
+        }
+
+        // Kiểm tra giá trị của biến cờ và thực hiện chuyển hướng dựa trên kết quả
+        if (!$found) {
+            setcookie('err', "Sai tài khoản hoặc mật khẩu", time() + 1, "/");
+            header('location: /log_in');
         }
     }
 
     public function log_out()
     {
-        session_unset();
+        unset($_SESSION['user']);
         header('location: /home');
     }
 
