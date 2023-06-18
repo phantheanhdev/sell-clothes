@@ -80,10 +80,10 @@
                 </a></p>
             </div>
             <div class="phone"> <i class="fa fa-phone"></i>
-              <p>+84 328548878</p>
+              <p style="color: white;">+84 328548878</p>
             </div>
             <div class="address"> <i class="fa fa-map-marker"></i>
-              <p>3, ngõ 6 Miêu Nha, Nam Từ Liêm, Hà Nội</p>
+              <p style="color: white;">Nam Từ Liêm, Hà Nội</p>
             </div>
           </div>
         </div>
@@ -163,96 +163,6 @@
           <h4 class="modal-title">2 items in your cart</h4>
         </div>
         <div class="modal-body">
-
-          <!-- Begin shopping cart content -->
-
-          <!-- cart (/. comment nó lại :)  ) -->
-
-          <!-- <div class="cart-content">
-            <ul class="cart-product-list">
-              <li>
-
-                /.Begin shopping cart product
-
-                <div class="cart-product"> <a href="#" class="cart-pr-thumb bg-image"><img src="images/products/img07.jpg" alt="Lorem ipsum dolor" width="65"></a>
-                  <div class="cart-pr-info"> <a href="#" class="cart-pr-title">Lorem ipsum dolor sit amet Consectetur</a>
-                    <div class="cart-pr-price">$920.00</div>
-                    <div class="cart-pr-quantity">Quantity: <span>1</span></div>
-                  </div>
-                  <a href="#0" class="cart-pr-remove" title="Remove from cart">×</a>
-                </div>
-
-                /.End shopping cart product
-              </li>
-              <li>
-                /.Begin shopping cart product
-
-                <div class="cart-product"> <a href="#" class="cart-pr-thumb bg-image"><img src="images/products/img08.jpg" alt="Lorem ipsum dolor" width="65"></a>
-                  <div class="cart-pr-info"> <a href="#" class="cart-pr-title">Sed do eiusmod tempor incidist</a>
-                    <div class="cart-pr-price">$390.00</div>
-                    <div class="cart-pr-quantity">Quantity: <span>1</span></div>
-                  </div>
-                  <a href="#0" class="cart-pr-remove" title="Remove from cart">×</a>
-                </div>
-
-                /.End shopping cart product
-
-              </li>
-            </ul>
-          </div>
-
-          /.End shopping cart content
-
-        </div>
-        <div class="modal-footer padding-vertical-0">
-          <div class="cart-total"> <strong>Subtotal:</strong> <span>$1,310.00</span> </div>
-          <div class="row">
-            <div class="col-xs-6 no-padding"> <a href="shopping_cart.html" class="view-cart no-margin">View Cart</a> </div>
-            /.col
-
-            <div class="col-xs-6 no-padding"> <a href="checkout.html" class="btn-checkout no-margin">Checkout</a> </div>
-            /.col
-          </div>
-          /.row
-        </div>
-      </div>
-      /.modal-content
-    </div>
-    /.modal-dialog
-  </div> -->
-
-
-          <!-- form nhập email gửi thông tin sản phẩm mới về email -->
-          <!--Newsletter Popup Start -->
-          <!-- <div id="myModal" class="modal fade">
-    <div class="modal-dialog newsletter-popup">
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <div class="modal-body">
-          <h2 class="modal-title">Top Fashion</h2>
-          <form id="newsletter-form" method="post" action="#">
-            <div class="content-subscribe">
-              <div class="form-subscribe-header">
-                <label>Đăng ký ngay để nhận thông tin cập nhật về giảm giá & phiếu giảm giá</label>
-              </div>
-              <div class="input-box">
-                <input type="text" class="input-text newsletter-subscribe" title="Sign up for our newsletter" name="email" placeholder="Nhập email của bạn">
-              </div>
-              <div class="actions">
-                <button class="button-subscribe" title="Subscribe" type="submit">Gửi</button>
-              </div>
-            </div>
-          </form>
-          <div class="subscribe-bottom">
-            <input name="notshowpopup" id="notshowpopup" type="checkbox">
-            Không hiển thị lại
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-          <!--End of Newsletter Popup-->
-
         </div>
 
         <!-- mobile menu -->
@@ -260,67 +170,39 @@
           <ul>
             <li class=""><a href="/home">Home</a></li>
 
-            <li><a href="shop_grid.html">Đồ nam</a>
+            <li><a href="#">Đồ nam</a>
               <ul class="">
                 <li><a href="#">Áo</a>
                   <ul>
-                    <li><a href="shop_grid.html">Áo phông</a></li>
-                    <li><a href="shop_grid.html">Áo khoác</a></li>
+                    <li><a href="/products_by_type?ct_id=1">Áo phông</a></li>
+                    <li><a href="/products_by_type?ct_id=5">Áo khoác</a></li>
                   </ul>
                 </li>
-                <li><a href="shop_grid.html">Quần</a>
+                <li><a href="#">Quần</a>
                   <ul>
-                    <li><a href="shop_grid.html">Quần jean</a></li>
-                    <li><a href="shop_grid.html">Quần short</a></li>
+                    <li><a href="/products_by_type?ct_id=3">Quần jean</a></li>
+                    <li><a href="/products_by_type?ct_id=7">Quần short</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
             <!--  -->
-            <li><a href="shop_grid.html">Đồ nữ</a>
+            <li><a href="#">Đồ nữ</a>
               <ul class="">
                 <li><a href="#">Áo</a>
                   <ul>
-                    <li><a href="shop_grid.html">Áo phông</a></li>
-                    <li><a href="shop_grid.html">Áo khoác</a></li>
+                    <li><a href="/products_by_type?ct_id=2">Áo phông</a></li>
+                    <li><a href="/products_by_type?ct_id=6">Áo khoác</a></li>
                   </ul>
                 </li>
-                <li><a href="shop_grid.html">Quần</a>
+                <li><a href="#">Quần</a>
                   <ul>
-                    <li><a href="shop_grid.html">Quần jean</a></li>
-                    <li><a href="shop_grid.html">Quần short</a></li>
+                    <li><a href="/products_by_type?ct_id=4">Quần jean</a></li>
+                    <li><a href="/products_by_type?ct_id=8">Quần short</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <!-- <li><a href="shop_grid.html">Handbags</a>
-        <ul class="">
-          <li><a href="shop_grid.html">Footwear Man</a>
-            <ul>
-              <li><a href="shop_grid.html">Gold Rigng</a></li>
-              <li><a href="shop_grid.html">paltinum Rings</a></li>
-              <li><a href="shop_grid.html">Silver Ring</a></li>
-              <li><a href="shop_grid.html">Tungsten Ring</a></li>
-            </ul>
-          </li>
-          <li><a href="shop_grid.html">Footwear Womens</a>
-            <ul>
-              <li><a href="shop_grid.html">Brand Gold</a></li>
-              <li><a href="shop_grid.html">paltinum Rings</a></li>
-              <li><a href="shop_grid.html">Silver Ring</a></li>
-              <li><a href="shop_grid.html">Tungsten Ring</a></li>
-            </ul>
-          </li>
-          <li><a href="shop_grid.html">Band</a>
-            <ul>
-              <li><a href="shop_grid.html">Platinum Necklaces</a></li>
-              <li><a href="shop_grid.html">Gold Ring</a></li>
-              <li><a href="shop_grid.html">silver ring</a></li>
-              <li><a href="shop_grid.html">Diamond Bracelets</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li> -->
           </ul>
         </div>
 

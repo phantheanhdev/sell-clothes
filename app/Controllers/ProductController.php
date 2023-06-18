@@ -31,7 +31,7 @@ class ProductController extends Controller
         // $similar_pro : sản phẩm tương tự
         $similar_pro = ProductModel::get_data_by_condition("ct_id = $ct_id_single_pro");
 
-        $p = new ProductModel(); 
+        $p = new ProductModel();
         $p->increase_views_pro($id);
 
         $this->view_user('product/single_product', [

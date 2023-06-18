@@ -36,7 +36,7 @@
                                                     </a>
                                                 </td>
                                                 <td class="cart_description">
-                                                    <p class="product-name"><?= $list_cart['pro_name'] ?></p>
+                                                    <p class="product-name" id="cart_pro_name_black"><?= $list_cart['pro_name'] ?></p>
                                                 </td>
                                                 <?php
                                                 foreach ($all_colors as $colors) {

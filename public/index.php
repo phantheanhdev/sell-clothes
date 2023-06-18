@@ -41,7 +41,6 @@ Router::get('/pay', [CartController::class, 'pay']);
 Router::get('/order', [CartController::class, 'order']);
 
 
-
 // single product
 Router::get('/single_product', [ProductController::class, 'single_product']);
 

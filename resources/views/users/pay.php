@@ -93,11 +93,22 @@
                 <div class="col-xs-6">
                     <form action="">
                         <div class="">
-                            <input type="radio" name="pttt" value="1">
-                            <label for="">Chuyển khoản</label>
+                            <input type="radio" name="pttt" value="1" disabled>
+                            <img src="/images/pay/visa-logo.jpg" alt="" width="40px" height="40px">
+                            <label for="">Visa(đang update)</label>
+                        </div>
+                        <div class="" style="margin: 20px auto;">
+                            <input type="radio" name="pttt" value="2" disabled>
+                            <img src="/images/pay/paypal-logo.png" alt="" width="40px" height="40px">
+                            <label for="">PayPal(đang update)</label>
                         </div>
                         <div class="">
-                            <input type="radio" name="pttt" value="2" checked>
+                            <input type="radio" name="pttt" value="3" disabled>
+                            <img src="/images/pay/bidv-logo.png" alt="" width="40px" height="40px">
+                            <label for="">BIDV(đang update)</label>
+                        </div>
+                        <div class="">
+                            <input type="radio" name="pttt" value="4" checked>
                             <label for="">Thanh toán khi nhận hàng</label>
                         </div>
                     </form>
@@ -118,7 +129,7 @@
         </div>
         <div class="col-xs-2">
             <a href="/order">
-                <button class="btn ">Đặt hàng</button>
+                <button class="btn">Đặt hàng</button>
             </a>
         </div>
     </div>

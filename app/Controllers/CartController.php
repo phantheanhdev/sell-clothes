@@ -2,8 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\BillModel;
 use App\Models\ColorModel;
 use App\Models\SizeModel;
+use App\Request;
 
 class CartController extends Controller
 {
@@ -51,15 +53,18 @@ class CartController extends Controller
         $all_colors = ColorModel::all();
         $all_sizes = SizeModel::all();
 
-
         if (isset($_SESSION['user'])) {
-            $this->view_user(
-                'pay',
-                [
-                    'all_colors' => $all_colors,
-                    'all_sizes' => $all_sizes
-                ]
-            );
+            if (!isset($_SESSION['list_cart']) && empty($_SESSION['list_cart'])) {
+                header('location: /cart');
+            } else {
+                $this->view_user(
+                    'pay',
+                    [
+                        'all_colors' => $all_colors,
+                        'all_sizes' => $all_sizes
+                    ]
+                );
+            }
         } else {
             setcookie('err', "Bạn cần đăng nhập để mua hàng", time() + 1, "/");
             header('location: /log_in');
@@ -67,6 +72,7 @@ class CartController extends Controller
     }
     public function order()
     {
+        unset($_SESSION['list_cart']);
         $this->view_user('order');
     }
 }
