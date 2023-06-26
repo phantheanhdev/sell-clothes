@@ -1,16 +1,3 @@
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <ul>
-                    <li class="home"> <a title="Go to Home Page" href="index.html">Trang chủ</a><span>&raquo;</span></li>
-                    <li><strong>Đăng nhập</strong></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Breadcrumbs End -->
 
 <!-- Main Container -->
 

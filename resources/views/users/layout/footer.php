@@ -152,109 +152,100 @@
       </div>
     </div>
   </footer>
-  <a href="#" class="totop"> </a>
+
   <!-- End Footer -->
+  </div>
+  
+  <!-- mobile menu -->
+  <div id="jtv-mobile-menu" class="jtv-mobile-menu">
+    <ul>
+      <li class=""><a href="/home">Home</a></li>
 
-  <div id="modal-cart" class="modal modal-right fade" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <h4 class="modal-title">2 items in your cart</h4>
-        </div>
-        <div class="modal-body">
-        </div>
+      <li><a href="#">Đồ nam</a>
+        <ul class="">
+          <li><a href="#">Áo</a>
+            <ul>
+              <li><a href="/products_by_type?ct_id=1">Áo phông</a></li>
+              <li><a href="/products_by_type?ct_id=5">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Quần</a>
+            <ul>
+              <li><a href="/products_by_type?ct_id=3">Quần jean</a></li>
+              <li><a href="/products_by_type?ct_id=7">Quần short</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--  -->
+      <li><a href="#">Đồ nữ</a>
+        <ul class="">
+          <li><a href="#">Áo</a>
+            <ul>
+              <li><a href="/products_by_type?ct_id=2">Áo phông</a></li>
+              <li><a href="/products_by_type?ct_id=6">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Quần</a>
+            <ul>
+              <li><a href="/products_by_type?ct_id=4">Quần jean</a></li>
+              <li><a href="/products_by_type?ct_id=8">Quần short</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
-        <!-- mobile menu -->
-        <div id="jtv-mobile-menu" class="jtv-mobile-menu">
-          <ul>
-            <li class=""><a href="/home">Home</a></li>
+  <!-- jquery js -->
+  <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/jquery.min.js"></script>
 
-            <li><a href="#">Đồ nam</a>
-              <ul class="">
-                <li><a href="#">Áo</a>
-                  <ul>
-                    <li><a href="/products_by_type?ct_id=1">Áo phông</a></li>
-                    <li><a href="/products_by_type?ct_id=5">Áo khoác</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Quần</a>
-                  <ul>
-                    <li><a href="/products_by_type?ct_id=3">Quần jean</a></li>
-                    <li><a href="/products_by_type?ct_id=7">Quần short</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <!--  -->
-            <li><a href="#">Đồ nữ</a>
-              <ul class="">
-                <li><a href="#">Áo</a>
-                  <ul>
-                    <li><a href="/products_by_type?ct_id=2">Áo phông</a></li>
-                    <li><a href="/products_by_type?ct_id=6">Áo khoác</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Quần</a>
-                  <ul>
-                    <li><a href="/products_by_type?ct_id=4">Quần jean</a></li>
-                    <li><a href="/products_by_type?ct_id=8">Quần short</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
 
-        <!-- jquery js -->
-        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+  <!-- owl.carousel.min js -->
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+  <!-- Mean Menu js -->
+  <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script>
 
-        <!-- owl.carousel.min js -->
-        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <!--jquery-ui.min js -->
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
 
-        <!-- Mean Menu js -->
-        <script type="text/javascript" src="js/jquery.meanmenu.min.js"></script>
+  <!-- countdown js -->
+  <script type="text/javascript" src="js/countdown.js"></script>
 
-        <!--jquery-ui.min js -->
-        <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <!-- wow JS -->
+  <script type="text/javascript" src="js/wow.min.js"></script>
 
-        <!-- countdown js -->
-        <script type="text/javascript" src="js/countdown.js"></script>
+  <!-- mobile menu JS -->
+  <script type="text/javascript" src="js/jtv-mobile-menu.js"></script>
 
-        <!-- wow JS -->
-        <script type="text/javascript" src="js/wow.min.js"></script>
+  <!-- main js -->
+  <script type="text/javascript" src="js/main.js"></script>
 
-        <!-- mobile menu JS -->
-        <script type="text/javascript" src="js/jtv-mobile-menu.js"></script>
-
-        <!-- main js -->
-        <script type="text/javascript" src="js/main.js"></script>
-
-        <!-- nivo slider js -->
-        <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+  <!-- nivo slider js -->
+  <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
 
 
-        <!-- Hot Deals Timer 1-->
-        <script type="text/javascript">
-          var dthen1 = new Date("11/25/17 11:59:00 PM");
-          start = "08/04/16 03:02:11 AM";
-          start_date = Date.parse(start);
-          var dnow1 = new Date(start_date);
-          if (CountStepper > 0)
-            ddiff = new Date((dnow1) - (dthen1));
-          else
-            ddiff = new Date((dthen1) - (dnow1));
-          gsecs1 = Math.floor(ddiff.valueOf() / 1000);
+  <!-- Hot Deals Timer 1-->
+  <script type="text/javascript">
+    var dthen1 = new Date("11/25/17 11:59:00 PM");
+    start = "08/04/16 03:02:11 AM";
+    start_date = Date.parse(start);
+    var dnow1 = new Date(start_date);
+    if (CountStepper > 0)
+      ddiff = new Date((dnow1) - (dthen1));
+    else
+      ddiff = new Date((dthen1) - (dnow1));
+    gsecs1 = Math.floor(ddiff.valueOf() / 1000);
 
-          var iid1 = "countbox_1";
-          CountBack_slider(gsecs1, "countbox_1", 1);
-        </script>
-        </body>
+    var iid1 = "countbox_1";
+    CountBack_slider(gsecs1, "countbox_1", 1);
+  </script>
+  </body>
 
-        <!-- Mirrored from htmlfancy.justthemevalley.com/version2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Apr 2023 15:29:54 GMT -->
+  <!-- Mirrored from htmlfancy.justthemevalley.com/version2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Apr 2023 15:29:54 GMT -->
 
-        </html>
+  </html>
