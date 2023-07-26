@@ -25,14 +25,14 @@
                                 </div>
                                 <span class="form-text" id="err_full_name" style="color: red;"> </span>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-sm-12">
                                 <label>Địa chỉ:</label>
                                 <div class="input-text">
                                     <input type="text" name="us_address" id="address" class="form-control">
                                 </div>
                                 <span class="form-text" id="err_address" style="color: red;"> </span>
                             </div>
-                            <div class="col-xs-12">
+                            <div class="col-sm-12">
                                 <label>Email:</label>
                                 <div class="input-text">
                                     <input type="email" name="us_email" id="email" class="form-control">

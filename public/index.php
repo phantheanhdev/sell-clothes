@@ -19,6 +19,7 @@ $router = new Router;
 // home
 Router::get('/', [HomeController::class, 'index']);
 Router::get('/home', [HomeController::class, 'index']);
+Router::get('/search_product', [ProductController::class, 'search_product']);
 
 // product by type 
 Router::get('/products_by_type', [ProductController::class, 'products_by_type']);

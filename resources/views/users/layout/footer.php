@@ -59,7 +59,7 @@
               <div class="col-md-4 col-sm-12">
                 <div class="social">
                   <ul class="inline-mode">
-                    <li class="social-network fb"><a title="Connect us on Facebook" target="_blank" href=""><i class="fa fa-facebook"></i></a></li>
+                    <li class="social-network fb"><a title="Connect us on Facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
                     <li class="social-network googleplus"><a title="Connect us on Google+" target="_blank" href=""><i class="fa fa-google-plus"></i></a></li>
                     <li class="social-network tw"><a title="Connect us on Twitter" target="_blank" href=""><i class="fa fa-twitter"></i></a></li>
                     <li class="social-network linkedin"><a title="Connect us on Linkedin" target="_blank" href=""><i class="fa fa-linkedin"></i></a></li>

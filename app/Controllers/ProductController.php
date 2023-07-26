@@ -42,6 +42,16 @@ class ProductController extends Controller
         ]);
     }
 
+    // search product
+    public function search_product()
+    {
+        $text_search = $_GET['text_search'];
+
+        $products = ProductModel::get_data_by_condition("pro_name LIKE '%$text_search%'");
+        $this->view_user('product/search_product', ['products' => $products]);
+    }
+
+
     // =============== admin =======================
     public function ad_list_pro()
     {

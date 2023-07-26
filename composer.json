@@ -11,5 +11,7 @@
             "email": "phananh.main@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "laravel/framework": "^8.0"
+    }
 }

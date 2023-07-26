@@ -94,12 +94,13 @@
               <div class="logo"><a title="e-commerce" href="/home"><img alt="e-commerce" src="images/logo.png"></a> </div>
             </div>
             <div class="col-xs-12 col-sm-5 col-md-6 col-md-5 top-search">
+
               <!-- Search -->
               <div id="search">
-                <form>
+                <form action="/search_product" method="GET" enctype="multipart/form-data">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
-                    <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
+                    <input type="text" class="form-control" placeholder="Search" name="text_search">
+                    <button class="btn-search" type="submit"><i class="fa fa-search"></i></button>
                   </div>
                 </form>
               </div>
